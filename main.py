@@ -8,7 +8,7 @@ import analysis as an
 
 df = pd.read_csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
 # df.info()
-# print(df.head())
+# df.head()
 # df.duplicated().sum()
 # df.isna().sum()
 
@@ -28,17 +28,13 @@ for col, uni_val in string_value_list.items():
 #-----------------------------------------------------------
 
 
-# Calculate the correlation matrix and visualize
-# corr_matrix = df.corr()
-# vi.correlation_map(corr_matrix)
-
-
 ## ANOVA analysis for defining variable irrelevancy with the target
 # anova_analysis(cat_cols, df['Attrition'])
 
 
-# Remove columns having under a specified importance threshold value, from the dataframe
+# Remove columns below a specified importance degree
 fi = an.fi_analysis(df, 'Attrition')
 df_imp = an.remove_unimportant(df, fi)
-df_imp.info()
 
+# Correlation visualization between 'Attrition' and other variables
+vi.correlation_map(df, 'Attrition')

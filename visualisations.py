@@ -8,9 +8,10 @@ from pandas.plotting import register_matplotlib_converters
 sns.set_style("darkgrid")
 
 # Visualizing the correlation matrix
-def correlation_map(c_matrix):
-    plt.figure(figsize=(70, 10))
-    heatmap = sns.heatmap(c_matrix, vmin=-1, vmax=1, annot=True, cmap='coolwarm')
-    heatmap.set_title('Correlation between Variables', fontdict={'fontsize':5}, pad=12);
-    plt.savefig('c_matrix.png', dpi=300, bbox_inches='tight')
+def correlation_map(df, target):
+    cor = df.corr()[[target]].sort_values(by=target, ascending=False)
+    plt.figure(figsize=(16, 6))
+    heatmap = sns.heatmap(cor, vmin=-1, vmax=1, annot=True, cmap='BrBG')
+    heatmap.set_title('Correlation Heatmap for Attrition',
+                    fontdict={'fontsize': 18}, pad=12)
     plt.show()
