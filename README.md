@@ -15,3 +15,8 @@
 3. How does employee education level affect their monthly income, and does this impact attrition rates?
 4. Are there any gender differences in job satisfaction, and does this impact attrition rates?
 5. What factors are associated with employee performance ratings, and is there a relationship between performance ratings and attrition?
+
+
+## SCREEN SHOTS
+![Screenshot Numeric](https://github.com/KursaDSc/IBM-HR-Analytics-Employee-Attrition/assets/122086208/ab7ca846-c232-4939-9350-359c81383b78)
+![Screenshot Catagoric](https://github.com/KursaDSc/IBM-HR-Analytics-Employee-Attrition/assets/122086208/f24c1e6d-8542-4736-91c4-aff44436adeb)
